@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Noms des pays européens</h1>
+    <ul>
+        <%
+var list = '';
+for (i = 0; i < all.length; i++) {
+list += '<li>' + all[i]['name'].common+ '</li>';
+}
+%>
+            <%- list %>
+    </ul>
+</body>
+
+</html>

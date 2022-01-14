@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Toutes les infos disponibles sur un pays donné : </h1>
+    <ul>
+        <%
+var list = '';
+for (i = 0; i < pays_donne.length; i++) {
+    list += '<li><b> Pays : </b>' + pays_donne[i]['name'].common + "<b> Area : </b> " 
+        + pays_donne[i]['area'] + 
+        "<b> Region </b> " + pays_donne[i]['region'] + 
+        " <b> languages : </b>";
+}
+for (x = 0; x < lan_data.length; x++) {
+    
+    list +=  lan_data[x] +  '</li>';
+ }
+%>
+            <%- list %>
+    </ul>
+</body>
+
+</html>

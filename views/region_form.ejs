@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>la région dans une liste ("Africa", "Americas", etc)</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+</head>
+
+<body>
+    <h1>
+        la région dans une liste ("Africa", "Americas", etc)
+    </h1>
+    <form id="formFindCountry" name="region_action" method="post" action="/region_action">
+        <select id="region_action" name="region_action">
+            <%
+var list = '';
+for (i = 0; i < region_form.length; i++) { %>
+<option value="<%= region_form[i] %>" name="region_action" > <%=  region_form[i] %></option>
+<%}
+%>
+
+           
+        </select>
+        <button id="btnSubmit" type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

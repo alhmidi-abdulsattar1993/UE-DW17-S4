@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Noms et superficie des pays ayant une superficie entre 400000 et 500000 km2</h1>
+    <ol>
+        <%
+var list = '';
+for (i = 0; i < superficie.length; i++) {
+list += '<li><b>Name : </b>' + superficie[i]['name'].common + "<b>  Superficie : </b>" + superficie[i]['area'] +  '</li>';
+}
+%>
+            <%- list %>
+    </ol>
+</body>
+
+</html>

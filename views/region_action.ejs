@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>User List</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+    <h1>Nom du pays trouvé dans la région sélectionnée</h1>
+    <ul>
+        <%
+var list = '';
+for (i = 0; i < region_action.length; i++) {
+list += '<li>' + region_action[i]['name'].common+ '</li>';
+}
+%>
+            <%- list %>
+    </ul>
+</body>
+
+</html>
